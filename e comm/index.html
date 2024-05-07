@@ -1,0 +1,1880 @@
+<!--doctype html-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, intial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+  <link rel="website icon" type="icon" href="art.png" >
+<title>ART store.</title>
+	<!--style----->
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* //........top text ........// */
+
+:root {
+    /* //....... Color ........// */
+    --primary-color: #ff3c78;
+    --light-black: rgba(0, 0, 0, 0.89);
+    --black: #000;
+    --white: #fff;
+    --grey: #aaa;
+}
+
+
+/* //........top text ........// */
+
+.top-txt {
+    background-color: var(--black);
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.945);
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.head a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.945);
+    margin: 0 10px;
+}
+
+
+/* //........ Navbar ........// */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+    display: none;
+}
+
+.navbar {
+    box-shadow: 0 5px 4px rgb(146 161 176 / 15%);
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    color: var(--black);
+    z-index: 100;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.navbar img {
+    margin-left: 3rem;
+}
+
+.menu-items {
+    order: 2;
+    display: flex;
+    margin-right: -12rem;
+}
+
+.menu-items li {
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.navbar-container ul a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 18px;
+    position: relative;
+}
+
+.navbar-container ul a:after {
+    content: "";
+    position: absolute;
+    background: var(--primary-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.navbar-container ul a:hover:after {
+    width: 100%;
+}
+.search-bar input::placeholder{
+  Color: #f05e8a;
+  font-width: 500;
+  font-family: Times New Roman;
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.search-bar input {
+  width: 50%;
+  min-width: 300px;
+  border-radius: 5px;
+  font-size: 25px;
+  border: 0px;
+  outline: none;
+  Color: #f05e8a;
+  border: 1px solid Black;
+  margin: 120px;
+  font-family: cursive;
+}
+
+.search-bar [list]::-webkit-list-button,
+.search-bar [list]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+.search-display {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        opacity: 0.95;
+    }
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines {
+        display: block;
+    }
+    .navbar-container {
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+    .navbar-container input[type="checkbox"] {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .navbar-container .hamburger-lines {
+        display: block;
+        height: 28px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .navbar-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+    .navbar-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .menu-items{
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 100%;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        /* margin-left: -40px;
+        padding-left: 40px; */
+        text-align: center;
+        transition: transform 0.5s ease-in-out;
+        /* box-shadow: 5px 0px 10px 0px #aaa; */
+        overflow: scroll;
+    }
+    .navbar .menu-items li  {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    .menu-items li,
+    .navbar img {
+        margin: 0;
+    }
+    .navbar .menu-items li :nth-child(1) {
+        margin-top: 1.5rem;
+    }
+    .navbar-container .logo img {
+        position: absolute;
+        top: 0px;
+        right: 15px;
+        margin-top: -19px;
+    }
+    .navbar-container input[type="checkbox"]:checked~.menu-items  {
+        transform: translateX(0);
+    }
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+        transform: rotate(45deg);
+    }
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+        transform: rotate(-45deg);
+    }
+    .navbar-container input[type="checkbox"]:checked~.home_page img {
+        display: none;
+        background: #fff;
+    }
+	
+	
+}
+
+@media (max-width: 500px) {
+    .navbar-container input[type="checkbox"]:checked~.navbar-container img {
+        display: none;
+    }
+}
+
+
+/* //........ Home ........// */
+
+.home_page img {
+    height: auto;
+    width: 100%;
+    background-position: center;
+    position: relative;
+    background-size: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.home_txt {
+    position: absolute;
+    top: 37%;
+    left: 5%;
+}
+
+.home_txt p {
+    color: var(--primary-color);
+    font-weight: 600;
+    padding-bottom: 20px;
+    letter-spacing: 1.5px;
+}
+
+.home_txt h2 {
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 53px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: var(--light-black);
+}
+
+.home_txt .home_label p {
+    color: grey;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.home_txt a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.home_txt button {
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.home_txt .bx-right-arrow-alt {
+    font-size: 25px;
+    padding-left: 5px;
+}
+
+.home_txt .home_social_icons a {
+    text-decoration: none;
+    color: var(--light-black);
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+
+/* //........ Collections ........// */
+
+.collections {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 65px;
+}
+
+.content {
+    width: 300px;
+    margin: 20px;
+    position: relative;
+}
+
+.content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    z-index: 2;
+    opacity: 0;
+}
+
+.content:hover::after {
+    opacity: 1;
+}
+
+.content img {
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.img-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    color: var(--white);
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    z-index: 5;
+    opacity: 0;
+}
+
+.img-content p {
+    font-size: 1.6rem;
+}
+
+.img-content button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.img-content a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.img-content button:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.img-content button:hover~.img-content a {
+    color: var(--primary-color);
+}
+
+.img-content a:hover {
+    color: var(--primary-color);
+}
+
+.content:hover .img-content {
+    opacity: 1;
+    top: 50%;
+}
+
+
+/* //........ Content 2 ........// */
+
+.content2 {
+    width: 300px;
+    margin: 20px;
+    position: relative;
+}
+
+.content2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    z-index: 2;
+    opacity: 0;
+}
+
+.content2:hover::after {
+    opacity: 1;
+}
+
+.content2 img {
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.img-content2 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    color: var(--white);
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    z-index: 5;
+    opacity: 0;
+}
+
+.img-content2 p {
+    font-size: 1.6rem;
+}
+
+.img-content2 a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.img-content2 button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.img-content2 button:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.img-content2 button:hover~.img-content2 a {
+    color: var(--primary-color);
+}
+
+.img-content2 a:hover {
+    color: var(--primary-color);
+}
+
+.content2:hover .img-content2 {
+    opacity: 1;
+    top: 50%;
+}
+
+
+/* //........ Content 3 ........// */
+
+.content3 {
+    width: 300px;
+    margin: 20px;
+    position: relative;
+}
+
+.content3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    z-index: 2;
+    opacity: 0;
+}
+
+.content3:hover::after {
+    opacity: 1;
+}
+
+.content3 img {
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.img-content3 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    color: var(--white);
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    z-index: 5;
+    opacity: 0;
+}
+
+.img-content3 p {
+    font-size: 1.6rem;
+}
+
+.img-content3 a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.img-content3 button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.img-content3 button:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.img-content3 button:hover~.img-content3 a {
+    color: var(--primary-color);
+}
+
+.img-content3 a:hover {
+    color: var(--primary-color);
+}
+
+.content3:hover .img-content3 {
+    opacity: 1;
+    top: 50%;
+}
+
+.content3:hover .img-content3 {
+    opacity: 1;
+    top: 50%;
+}
+
+
+/* //........ seller  ........// */
+
+.best-seller {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.best-seller .red {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.best-seller .blue {
+    color: #8989ce;
+    cursor: pointer;
+}
+
+.best-seller .white {
+    color: var(--light-black);
+    cursor: pointer;
+}
+
+.best-seller .grey {
+    color: grey;
+    cursor: pointer;
+}
+
+.best-seller .brown {
+    color: rgb(175, 53, 53);
+    cursor: pointer;
+}
+
+.best-seller .yellow {
+    color: #ffff00;
+    cursor: pointer;
+}
+
+.best-seller .orange {
+    color: #ffa500;
+    cursor: pointer;
+}
+
+.best-seller .green {
+    color: #008000;
+    cursor: pointer;
+}
+
+.seller h2 {
+    margin-top: 65px;
+    margin-bottom: 20px;
+}
+
+.seller .best-p1 {
+    width: 266px;
+    height: 370px;
+    /* border: 2px solid black; */
+}
+
+.seller .best-p1 img {
+    height: 250px;
+    width: 250px;
+}
+
+.seller .best-p1 .price {
+    display: flex;
+	Color: #92316D;
+}
+
+.seller .best-p1 .price .colors input[type="radio"] {
+    color: #ff3c78;
+    background-color: #000;
+}
+
+.best-seller .buy-now a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.seller a:hover {
+    color: #f05e8a;
+}
+
+.best-seller .buy-now button,
+.best-seller .add-cart button {
+    padding: 10px 15px;
+    margin-top: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #f05e8a;
+    color: var(--white);
+    border: none;
+    border-radius: 15px;
+    font-weight: 500;
+    border: 1px solid #f05e8a;
+    transition: 0.5s;
+}
+
+.best-seller .buy-now button:hover,
+.best-seller .add-cart button:hover {
+    background-color: var(--white);
+    font-weight: 600;
+}
+
+.best-seller .buy-now button:hover a,
+.best-seller .add-cart button:hover a {
+    color: #f05e8a;
+}
+
+
+/* .best-seller .add-cart button {
+    padding: 5px 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    cursor: pointer;
+} */
+
+
+/* //........ deal of week ........// */
+
+.deal_of_week {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deal_of_week .names_of_brand p,
+.deal_of_week .names_of_brand h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.deal_of_week .names_of_brand p {
+    color: var(--grey);
+}
+
+.deal_of_week .countdown span {
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 0.8rem 0 0 3rem;
+}
+
+.deal_of_week .countdown h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--light-black);
+    line-height: 40px;
+    margin: 0.8rem 0 0 3rem;
+}
+
+.deal_of_week .countdown p {
+    margin: 0.8rem 0 0 3rem;
+}
+
+.deal_of_week .countdown a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 800;
+}
+
+.deal_of_week .countdown button {
+    margin: 0.8rem 3rem;
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 12px;
+    transition: 0.4s;
+}
+
+.deal_of_week .countdown button:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.deal_of_week .countdown button:hover~.countdown a {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.countdown a:hover {
+    color: var(--primary-color);
+}
+
+
+/* //........ NEWS ........// */
+
+#news {
+    margin-bottom: 250px;
+}
+
+.news-heading p {
+    text-align: center;
+    font-size: 18px;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 70px;
+}
+
+.news-heading h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--light-black);
+}
+
+.l-news {
+    padding-top: 45px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.l-news img {
+    height: 300px;
+    width: 295px;
+}
+
+.l-news1 {
+    position: relative;
+    width: 260px;
+    height: 230px;
+}
+
+.l-news1 .news1-conte {
+    position: absolute;
+    bottom: -60%;
+    left: 7%;
+    background: var(--white);
+    padding: 25px;
+}
+
+.l-news2 {
+    position: relative;
+    width: 280px;
+    height: 230px;
+}
+
+.l-news2 .news2-conte {
+    position: absolute;
+    bottom: -60%;
+    left: 7%;
+    background: var(--white);
+    padding: 25px;
+}
+
+.l-news3 {
+    position: relative;
+    width: 280px;
+    height: 230px;
+}
+
+.l-news3 .news3-conte {
+    position: absolute;
+    bottom: -60%;
+    left: 7%;
+    background: var(--white);
+    padding: 25px;
+}
+
+.l-news1 .news1-conte .date-news1 p {
+    color: var(--light-black);
+    text-align: center;
+    padding: 15px 0;
+}
+
+.l-news1 .news1-conte .date-news1 h4 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.l-news1 .news1-conte .date-news1 a {
+    text-decoration: none;
+    text-align: center;
+    padding: 0 50px;
+    color: var(--primary-color);
+    position: relative;
+    font-weight: 600;
+}
+
+.l-news1 .news1-conte .date-news1 a::after {
+    content: "";
+    position: absolute;
+    background: #ff3c78;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.l-news1 .news1-conte .date-news1 a:hover:after {
+    width: 0%;
+}
+
+.l-news1 .news1-conte .date-news1 a:hover {
+    color: var(--black);
+}
+
+.l-news2 .news2-conte .date-news2 p {
+    color: var(--light-black);
+    text-align: center;
+    padding: 15px 0;
+}
+
+.l-news2 .news2-conte .date-news2 h4 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.l-news2 .news2-conte .date-news2 a {
+    text-decoration: none;
+    text-align: center;
+    padding: 0 60px;
+    color: var(--primary-color);
+    position: relative;
+    font-weight: 600;
+}
+
+.l-news2 .news2-conte .date-news2 a::after {
+    content: "";
+    position: absolute;
+    background: #ff3c78;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.l-news2 .news2-conte .date-news2 a:hover:after {
+    width: 0%;
+}
+
+.l-news2 .news2-conte .date-news2 a:hover {
+    color: var(--black);
+}
+
+.l-news3 .news3-conte .date-news3 p {
+    color: var(--light-black);
+    text-align: center;
+    padding: 15px 0;
+}
+
+.l-news3 .news3-conte .date-news3 h4 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.l-news3 .news3-conte .date-news3 a {
+    text-decoration: none;
+    text-align: center;
+    padding: 0 60px;
+    color: var(--primary-color);
+    position: relative;
+    font-weight: 600;
+}
+
+.l-news3 .news3-conte .date-news3 a::after {
+    content: "";
+    position: absolute;
+    background: #ff3c78;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.l-news3 .news3-conte .date-news3 a:hover:after {
+    width: 0%;
+}
+
+.l-news3 .news3-conte .date-news3 a:hover {
+    color: var(--black);
+}
+
+
+/* //........ Footer ...... // */
+
+footer {
+    width: 100%;
+    background: var(--black);
+}
+
+.footer-container .content_1 img {
+    height: 100px;
+    width: 235px;
+	background-color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+
+.footer-container h4 {
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.footer-container a {
+    display: block;
+    text-decoration: none;
+    color: var(--grey);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.footer-container .content_1 p,
+.footer-container .content_4 p {
+    color: var(--grey);
+    margin: 25px 0;
+    font-size: 14px;
+}
+
+.footer-container .content_4 input[type="email"] {
+    background-color: var(--black);
+    border: none;
+    color: var(--white);
+    outline: none;
+    padding: 15px 0;
+}
+
+.footer-container .content_4 .f-mail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container .content_4 .bx {
+    color: var(--white);
+}
+
+.f-design {
+    width: 100%;
+    color: var(--white);
+    text-align: center;
+}
+
+.f-design .f-design-txt {
+    border-top: 1px solid var(--grey);
+    padding: 25px 0;
+    font-size: 14px;
+    color: var(--grey);
+}
+
+
+/* //........ contact ...... // */
+
+.contact {
+    margin-top: 45px;
+}
+
+iframe {
+    height: 72vh;
+    width: 100%;
+	margin-top: 144px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.form .form-txt {
+    flex-basis: 48%;
+}
+
+.form .form-txt h4 {
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.form .form-txt h1 {
+    font-weight: 600;
+    color: var(--black);
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    color: var(--light-black);
+}
+
+.form .form-txt span {
+    color: var(--light-black);
+    font-size: 14px;
+}
+
+.form .form-txt h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 15px 0;
+    color: var(--light-black);
+}
+
+.form .form-txt p {
+    color: var(--light-black);
+    font-size: 14px;
+}
+
+.form .form-details {
+    flex-basis: 48%;
+}
+
+.form .form-details input[type="text"],
+.form .form-details input[type="email"] {
+    padding: 15px 20px;
+    color: var(--grey);
+    outline: none;
+    border: 1px solid var(--grey);
+    margin: 35px 15px;
+    font-size: 14px;
+}
+
+.form .form-details textarea {
+    padding: 15px 20px;
+    margin: 0 15px;
+    color: var(--grey);
+    outline: none;
+    border: 1px solid var(--grey);
+    font-size: 14px;
+    resize: none;
+}
+
+.form .form-details button {
+    padding: 15px 25px;
+    color: var(--white);
+    font-weight: 500;
+    background: var(--black);
+    outline: none;
+    border: none;
+    margin: 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+
+/* //....... Media Queries .......// */
+
+@media (max-width: 500px) {
+    .head {
+        display: none;
+    }
+    .top-txt .head p,
+    .top-txt .head a {
+        font-size: 10px;
+    }
+    .home_txt h2,
+    .home_txt .home_label p {
+        display: none;
+    }
+    .home_txt {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        font-size: 12px;
+    }
+    .home_txt button {
+        padding: 7px 7px;
+        font-size: 10px;
+    }
+    .home_txt i {
+        display: none;
+    }
+    .home_txt .home_social_icons {
+        /* display: flex; */
+        display: none;
+    }
+    .menu-items {
+        margin-right: 0;
+    }
+    .best-seller {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .l-news {
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+    }
+    .l-news .l-news1,
+    .l-news .l-news2 {
+        margin-bottom: 200px;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-container .content_1 {
+        margin-bottom: 30px;
+    }
+    .best-seller img {
+        padding-top: 40px;
+    }
+}
+
+@media(min-width: 501px) and (max-width: 768px) {
+    .head {
+        display: none;
+    }
+    .top-txt .head p,
+    .top-txt .head a {
+        font-size: 10px;
+    }
+    .home_txt h2,
+    .home_txt .home_label p {
+        display: none;
+    }
+    .home_txt {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        font-size: 12px;
+    }
+    .home_txt button {
+        padding: 7px 7px;
+        font-size: 10px;
+    }
+    .home_txt i {
+        display: none;
+    }
+    .home_txt .home_social_icons {
+        /* display: flex; */
+        display: none;
+    }
+    .menu-items {
+        margin-right: 0;
+    }
+    .best-seller {
+        display: flex;
+        flex-direction: column;
+    }
+    .l-news {
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+    }
+    .l-news .l-news1,
+    .l-news .l-news2 {
+        margin-bottom: 200px;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-container .content_1 {
+        margin-bottom: 30px;
+    }
+    .best-seller img {
+        padding-top: 40px;
+    }
+}
+
+@media(orientation: landscape) and (max-height: 500px) {
+    .header {
+        height: 90vmax;
+    }
+}
+
+
+/* //....... Media Queries For Contact .......// */
+
+@media (max-width: 500px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form .form-details button {
+        margin-left: 0;
+    }
+    .form .form-details input[type="text"],
+    .form .form-details input[type="email"],
+    .form .form-details textarea {
+        width: 100%;
+        margin-left: 0;
+    }
+    .form .form-details input[type="text"] {
+        margin-bottom: 0px;
+    }
+}
+
+@media(min-width: 501px) and (max-width: 768px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form .form-details button {
+        margin-left: 0;
+    }
+    .form .form-details input[type="text"],
+    .form .form-details input[type="email"],
+    .form .form-details textarea {
+        width: 100%;
+        margin-left: 0;
+    }
+    .form .form-details input[type="text"] {
+        margin-bottom: 0px;
+    }
+}
+
+
+
+
+
+
+
+	</style>
+	
+</head>
+<body>
+<section class=" top-txt ">
+        <div class="head container ">
+            <div class="head-txt ">
+                <p>Free shopping, 15-day return or refund guarantee.</p>
+            </div>
+            <div class="sing_in_up ">
+                <a href="# ">SIGN IN</a>
+                <a href="# ">SIGN UP</a>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar">
+        <div class="navbar-container">
+          <input type="checkbox" class="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sellers">Shop</a></li>
+                <li><a href="#recommended">recommended</a></li>
+                <li><a href="#contact">Contact</a></li>
+				<li>
+				<i class="fa fa-search"></i>&#160;<input type="text" class="searchbar" placeholder="&#x1F50D; search phone..." >
+				</li>
+            </ul>
+            <div class="logo">
+                <img src="art.png" alt="" height="100px" width="200px">
+            </div>
+			
+				<div class="search-bar">
+				<input type="text" class="searchbar" placeholder="&#x1F50D; search phone..." >
+				</div>
+			<hr>	
+	   </div>
+    </nav>
+	<script type="text/javascript">
+
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+
+searchInput.addEventListener('input', function() {
+    const query = this.value;
+
+    // Clear previous search results
+    searchResults.innerHTML = '';
+
+    // Perform search
+    if (query.length > 0) {
+        // You can make an AJAX request to the backend here
+        // For simplicity, let's assume search results are fetched from a local array
+        const results = searchData(query);
+
+        // Display search results
+        results.forEach(result => {
+            const li = document.createElement('li');
+            li.textContent = result;
+            searchResults.appendChild(li);
+        });
+    }
+});
+
+// Example function to simulate search data
+function searchData(query) {
+    const data = ['Apple', 'Banana', 'Orange', 'Pineapple', 'Mango', 'Grapes'];
+    return data.filter(item => item.toLowerCase().includes(query.toLowerCase()));
+}
+
+
+</script>
+	
+	
+    <section id="home">
+        <div class="home_page ">
+            <div class="home_img ">
+                <img src="s24 ultra.png" alt="img ">
+            </div>
+            <div class="home_txt ">
+                <p class="collectio ">The mobile store</p>
+                <h2>Buy any mobile.<br>2024 new Collection.</h2>
+                <div class="home_label ">
+                    <p>A specialist label creating luxury essentials. Ethically crafted<br>with an unwavering commitment to exceptional quality, art.</p>
+                </div>
+                <button><a href="#sellers">SHOP NOW </a> <i class='fa fa-shopping-cart'></i></button>
+				
+				<div class="home_label ">
+				<p style="font-size: 30px; Color: black;">payment type</p>
+				</div>
+				
+				<a href="" style="color: black;"><i class='fa fa-cc-paypal' style="font-size:36px"></i></a>&#160;<a href="" style="color: black;"><i class='fa fa-cc-visa' style="font-size:36px"></i></a>&#160;<a href="" style="color: black;"><i class='fa fa-cc-mastercard' style="font-size:36px"></i></a>&#160;<a href="" style="color: black;"><i class='fa fa-credit-card' style="font-size:36px"></i></a>&#160;<a href="" style="color: black;"><i class='fa fa-google-wallet' style="font-size:36px"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="collection">
+        <div class="collections container">
+            <div class="content">
+                <img src="https://images.samsung.com/bd/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-color-titanium-gray-back-mo.jpg?imbypass=true" alt="img" />
+                <div class="img-content">
+                    <p>Samsung s24 ultra</p>
+                    <button><a href="#sellers">SHOP NOW <i class='fa fa-shopping-cart'></i></a></button>
+                </div>
+            </div>
+            <div class="content2">
+                <img src="https://www.gizchina.com/wp-content/uploads/images/2023/01/iphone-15-pro-max-2.jpg" alt="img" />
+                <div class="img-content2">
+                    <p>iphone 15 pro max</p>
+                    <button><a href="#sellers">SHOP NOW <i class='fa fa-shopping-cart'></i></a></button>
+                </div>
+            </div>
+            <div class="content3">
+                <img src="https://pdaplaza.ca/cdn/shop/files/dlcdnwebimgs.asus_9a2625e4-8cd0-415f-bde3-9b4594d5e73d.jpg?v=1710522679" alt="img" />
+                <div class="img-content3">
+                    <p>Asus Zenfone 11 Ultra. play games</p>
+                    <button><a href="#sellers">SHOP NOW <i class='fa fa-shopping-cart'></i></a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+    <section id="sellers">
+        <div class="seller container">
+            <h2>Top Sales <span style="Color: #f05e8a;">Click image know features.</span></h2>
+            <div class="best-seller">
+                <div class="best-p1">
+                    <a href=""><img src="https://www.startech.com.bd/image/cache/catalog/mobile/samsung/galaxy-s22-ultra/galaxy-s22-ultra-001-500x500.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>Samsung Galaxy S22 Ultra Smartphone (12/256GB)</b></p>
+							<p>Brand: samsung</p>
+                        </div>
+                        <div class="price">
+                            Price:&#160;<del>120,999৳.</del>&#160;115,999৳.
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Buy  Now <i class='fa fa-shopping-cart'></i></a></button>
+                        </div>
+                        <!-- <div class="add-cart">
+                            <button>Add To Cart</button>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <a href=""><img src="https://www.startech.com.bd/image/cache/catalog/mobile/samsung/galaxy-s24-ultra/galaxy-s24-ultra-titanium-black-01-500x500.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>Samsung Galaxy S24 Ultra Smartphone (12/256GB)</b></p>
+							<p>Brand: samsung</p>
+                        </div>
+                        <div class="price">
+                            Price:&#160;<del>250,999৳.</del>&#160;235,999৳.
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Buy  Now <i class='fa fa-shopping-cart'></i></a></button>
+                        </div>
+                        <!-- <div class="add-cart">
+                            <button>Add To Cart</button>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <a href=""><img src="https://www.startech.com.bd/image/cache/catalog/mobile/apple/iphone-15-plus/iphone-15-plus-black-500x500.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>iPhone 15 256GB Black (Singapore)</b></p>
+							<p>Brand: Apple</p>
+                        </div>
+                        <div class="price">
+                            Price:&#160;<del>185,999৳.</del>&#160;175,500৳ .
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Buy  Now <i class='fa fa-shopping-cart'></i></a></button>
+                        </div>
+                        <!-- <div class="add-cart">
+                            <button>Add To Cart</button>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <a href=""><img src="https://www.startech.com.bd/image/cache/catalog/mobile/google/pixel-8-pro/pixel-8-pro-obsidian-01-500x500.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>Google Pixel 8 Pro Android Smartphone (12/128GB)</b></p>
+							<p>Brand: Google</p>
+                        </div>
+                        <div class="price">
+                            Price:&#160;<del>120,999৳.</del>&#160;115,999৳.
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Buy  Now <i class='fa fa-shopping-cart'></i></a></button>
+                        </div>
+                        <!-- <div class="add-cart">
+                            <button>Add To Cart</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seller container">
+            <h2>New Arrivals</h2>
+            <div class="best-seller">
+                <div class="best-p1">
+                    <a href=""><img src="https://www.startech.com.bd/image/cache/catalog/mobile/samsung/galaxy-s24-ultra/galaxy-s24-ultra-titanium-black-01-500x500.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>Samsung Galaxy S24 Ultra Smartphone (12/256GB)</b></p>
+							<p>Brand: samsung</p>
+                        </div>
+                        <div class="price">
+                            Price:&#160;<del>250,999৳.</del>&#160;235,999৳.
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Buy  Now <i class='fa fa-shopping-cart'></i></a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <a href=""><img src="https://www.startech.com.bd/image/cache/catalog/mobile/apple/iphone-15/blue/iphone-15-blue-02-500x500.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>iPhone 15 128GB Blue (Singapore Unofficial)</b></p>
+							<p>Brand: Apple</p>
+                        </div>
+                        <div class="price">
+                            Price: 120,000৳
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Buy  Now <i class='fa fa-shopping-cart'></i></a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <a href=""><img src="https://www.startech.com.bd/image/cache/catalog/mobile/vivo/v30/v30-peacock-green-500x500.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>Vivo V30 5G Smartphone (12/256GB)</b></p>
+							<p>Brand: Vivo</p>
+                        </div>
+                        <div class="price">
+                            Price: 62,999৳.
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Buy  Now <i class='fa fa-shopping-cart'></i></a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <a href=""><img src="https://www.mobiledokan.co/wp-content/uploads/2023/11/Infinix-Note-40-Pro-5G-Vintage-Green.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>Infinix Note 40 Pro Smartphone (12/256GB)</b></p>
+							<p>Brand: Infinix</p>
+                        </div>
+                        <div class="price">
+                            Price: 38,999৳.
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Buy  Now <i class='fa fa-shopping-cart'></i></a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seller container">
+            <h2>Hot Sales</h2>
+            <div class="best-seller">
+                <div class="best-p1">
+                    <a href=""><img src="https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-pro/space-gray/ipad-pro-m2-space-gray-02-500x500.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>Apple iPad Pro M2 12.9-inch </b></p>
+							<p>Brand: Apple<br>ipad</p>
+                        </div>
+                        <div class="price">
+                            Price: 220,000৳.
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Buy  Now <i class='fa fa-shopping-cart'></i></a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <a href=""><img src="https://www.startech.com.bd/image/cache/catalog/tablet/lenovo/xiaoxin-pad-pro/xiaoxin-pad-pro-01-500x500.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>Lenovo Xiaoxin Pad Pro 12.7 inch.</b></p>
+							<p>Brand: Lenovo<br>tab</p>
+                        </div>
+                        <div class="price">
+                            Price: 54,500৳.
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Buy  Now <i class='fa fa-shopping-cart'></i></a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <a href=""><img src="https://pdaplaza.ca/cdn/shop/files/dlcdnwebimgs.asus_9a2625e4-8cd0-415f-bde3-9b4594d5e73d.jpg?v=1710522679" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>Asus Zenfone 11 Ultra</b></p>
+							<p>Brand: Asus</p>
+                        </div>
+                        <div class="price">
+                            Price: 120,000৳.
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Buy  Now <i class='fa fa-shopping-cart'></i></a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <a href=""><img src="https://www.mobiledokan.co/wp-content/uploads/2023/11/Infinix-Note-40-Pro-5G-Vintage-Green.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>Infinix Note 40 Pro Smartphone (12/256GB)</b></p>
+							<p>Brand: Infinix</p>
+                        </div>
+                        <div class="price">
+                            Price: 34,999৳.
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Buy  Now <i class='fa fa-shopping-cart'></i></a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		       <div class="seller container">
+            <h2>Up Coming...</h2>
+            <div class="best-seller">
+                <div class="best-p1">
+                    <a href=""><img src="https://www.startech.com.bd/image/cache/catalog/mobile/apple/iphone-14-pro/gold/iphone-14-pro-gold-02-500x500.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>iPhone 14 Pro Max 128GB Gold (Singapore)</b></p>
+							<p>Brand: Apple</p>
+                        </div>
+                        <div class="price">
+                            Price:&#160;up-Coming..
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Coming soon... <i class='fa fa-spinner fa-spin'></i></a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <a href=""><img src="https://www.startech.com.bd/image/cache/catalog/mobile/google/pixel-fold/pixel-fold-porcelain-500x500.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>Google Pixel Fold Android Smartphone (12/256GB)</b></p>
+							<p>Brand: Google</p>
+                        </div>
+                        <div class="price">
+                            Price:&#160;up-Coming..
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Coming soon... <i class='fa fa-spinner fa-spin'></i></a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <a href=""><img src="https://www.startech.com.bd/image/cache/catalog/mobile/oppo/a38/a38-02-500x500.webp" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>OPPO A38 Smartphone (6/128GB)</b></p>
+							<p>Brand: OPPO</p>
+                        </div>
+                        <div class="price">
+                            Price:&#160;up-Coming..
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Coming soon... <i class='fa fa-spinner fa-spin'></i></a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQto04IpQaNSG7fsFpdgI1WwrMgOz4GRNe7Cc9AOcvppw&s" alt="img"></a>
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p><b>Asus ROG Phone 8 Ultimate</b></p>
+							<p>Brand: Asus</p>
+                        </div>
+                        <div class="price">
+                            Price:&#160;up-Coming..
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="">Coming soon... <i class='fa fa-spinner fa-spin'></i></a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="recommended">
+        <div class="news-heading">
+            <p>LATEST MOBILE.</p>
+            <h2>recommended for you.</h2>
+        </div>
+        <div class="l-news container">
+            <div class="l-news1">
+                <div class="news1-img">
+                    <img src="https://www.startech.com.bd/image/cache/catalog/mobile/zte/nubia-neo/nubia-neo-yellow-500x500.webp" alt="img">
+                </div>
+                <div class="news1-conte">
+                    <div class="date-news1">
+                        <p><i class='bx bxs-calendar'></i>ZTE nubia Neo 5G Smartphone (8/256GB) <span style="Color: #f05e8a;">Gaming.</span></p>
+                        <h4>Price: 25,499৳</h4>
+                        <a href="" target="_blank">Buy-now <i class='fa fa-shopping-cart'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="l-news2">
+                <div class="news2-img">
+                    <img src="https://www.startech.com.bd/image/cache/catalog/mobile/honor/honor-x8a/honor-x8a-01-500x500.webp" alt="img">
+                </div>
+                <div class="news2-conte">
+                    <div class="date-news2">
+                        <p><i class='bx bxs-calendar'></i> Honor X8a Smartphone (8/128GB) <span style="Color: #f05e8a;">Gaming.</span></p>
+                        <h4>Price: 30,499৳</h4>
+                        <a href="" target="_blank">Buy-now <i class='fa fa-shopping-cart'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="l-news3">
+                <div class="news3-img">
+                    <img src="https://www.startech.com.bd/image/cache/catalog/mobile/infinix/hot-40i/hot-40i-starlit-black-500x500.webp" alt="img">
+                </div>
+                <div class="news3-conte">
+                    <div class="date-news3">
+                        <p><i class='bx bxs-calendar'></i>Infinix Hot 40i Smartphone (8/128GB) <span style="Color: #f05e8a;">Gaming.</span></p>
+                        <h4>Price: 15,999৳</h4>
+                        <a href="" target="_blank">Buy-now <i class='fa fa-shopping-cart'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	
+    <section id="contact">
+        <div class="contact container">
+        <div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.304780214818!2d90.43807677424054!3d23.70080777870426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9c52da6328f%3A0xb81ae03f7b01709f!2sSorai%20Jame%20Masjid!5e0!3m2!1sen!2sbd!4v1713351161795!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <form action="https://formspree.io/f/xzbowpjq" method="POST">
+            <div class="form">
+                <div class="form-txt">
+                    <h4>INFORMATION</h4>
+                    <h1>Contact Us</h1>
+                    <span>As you might expect of a company that began as a high-end interiors contractor, we pay strict
+                        attention.</span>
+                    <h3>Bangladesh</h3>
+                    <p>Dhaka, Dania-1236<br>Sorai masjid Road.</p>
+					<p>Phone: +8801730183597</p>
+                    <h3>Other country</h3>
+                    <p>Not available </p><p style="color: #f05e8a;"><b>Comming soon...</b></p>
+                </div>
+                <div class="form-details">
+                    <input type="text" name="name" id="name" placeholder="Name" >
+                    <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+                    <textarea name="message" id="message" cols="52" rows="7" placeholder="Message" required></textarea>
+                    <button>SEND MESSAGE</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </section>
+	
+	
+	
+    <footer>
+        <div class="footer-container container">
+            <div class="content_1">
+                <img src="art.png" alt="logo">
+                <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
+				
+            </div>
+			<a href="" style="color: white;"><i class='fa fa-cc-visa' style="font-size:36px"></i></a><a href="" style="color: white;"><i class='fa fa-cc-mastercard' style="font-size:36px"></i></a><a href="" style="color: white;"><i class='fa fa-credit-card' style="font-size:36px"></i></a><a href="" style="color: white;"><i class='fa fa-google-wallet' style="font-size:36px"></i></a>
+            <div class="content_2">
+                <h4>SHOPPING</h4>
+                <a href="#sellers">Samsung Store</a>
+                <a href="#sellers">Apple store</a>
+                <a href="#sellers">Asus, vivo & others store</a>
+            </div>
+            <div class="content_3">
+                <h4>SHOPPING</h4>
+                <a href="./contact.html">Contact Us</a>
+                <a href="" target="_blank">Payment Method</a>
+                <a href="" target="_blank">Delivery</a>
+                <a href="" target="_blank">Return and Exchange</a>
+            </div>
+            <div class="content_4">
+                <h4>ART </h4>
+                <p>Be the first to know about new<br>arrivals, sales & promos!</p>
+                <div class="f-mail">
+                    <input type="email" placeholder="Your Email">
+                    <i class='fa fa-envelope' style="color: white;"></i>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt container">
+                <p>Art store Copyright © 2024-20.. Art store - All rights reserved || Designed By:<a href="" title="Founder of R.A.W." data-toggle="popover" data-trigger="hover" data-content="Facebook: Bappi bhdro" style="color: white;" > Bappi.</a></p>
+            </div>
+        </div>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();   
+});
+
+</script>
+    </footer>
+	<script>
+	$(document).ready(function () {
+  $("a").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        800,
+        function () {
+          window.location.hash = hash;
+        }
+      );
+    }
+  });
+});
+
+$(".menu-items a").click(function () {
+  $("#checkbox").prop("checked", false);
+});
+
+	</script>
+
+</body>
+</html>
